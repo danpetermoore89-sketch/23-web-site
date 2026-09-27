@@ -1,0 +1,260 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.6/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": false,
+    "color": {
+      "custom": false,
+      "customDuotone": false,
+      "customGradient": false,
+      "defaultDuotone": false,
+      "defaultGradients": false,
+      "defaultPalette": false,
+      "gradients": [
+        {
+          "slug": "brand",
+          "name": "Brand",
+          "gradient": "linear-gradient(110deg, #61ebb6 0%, #dd75e7 100%)"
+        }
+      ],
+      "palette": [
+        {
+          "slug": "black",
+          "name": "Black",
+          "color": "#09080a"
+        },
+        {
+          "slug": "white",
+          "name": "White",
+          "color": "#ffffff"
+        },
+        {
+          "slug": "off-white",
+          "name": "Off-white",
+          "color": "#f7f5f7"
+        },
+        {
+          "slug": "grey-700",
+          "name": "Grey 700",
+          "color": "#555158"
+        },
+        {
+          "slug": "grey-300",
+          "name": "Grey 300",
+          "color": "#d6d5d7"
+        },
+        {
+          "slug": "mint",
+          "name": "Mint",
+          "color": "#61ebb6"
+        },
+        {
+          "slug": "orchid",
+          "name": "Orchid",
+          "color": "#dd75e7"
+        }
+      ]
+    },
+    "layout": {
+      "contentSize": "46rem",
+      "wideSize": "78rem"
+    },
+    "spacing": {
+      "customSpacingSize": false,
+      "defaultSpacingSizes": false,
+      "spacingSizes": [
+        {
+          "slug": "20",
+          "name": "2XS",
+          "size": "0.5rem"
+        },
+        {
+          "slug": "30",
+          "name": "XS",
+          "size": "0.75rem"
+        },
+        {
+          "slug": "40",
+          "name": "S",
+          "size": "1rem"
+        },
+        {
+          "slug": "50",
+          "name": "M",
+          "size": "clamp(1.5rem, 1.15rem + 1vw, 2rem)"
+        },
+        {
+          "slug": "60",
+          "name": "L",
+          "size": "clamp(2rem, 1.3rem + 2vw, 3rem)"
+        },
+        {
+          "slug": "70",
+          "name": "XL",
+          "size": "clamp(3rem, 2rem + 3vw, 5rem)"
+        },
+        {
+          "slug": "80",
+          "name": "2XL",
+          "size": "clamp(4.5rem, 3rem + 5vw, 8rem)"
+        }
+      ]
+    },
+    "typography": {
+      "customFontSize": false,
+      "defaultFontSizes": false,
+      "fluid": true,
+      "fontFamilies": [
+        {
+          "slug": "body",
+          "name": "Source Sans 3",
+          "fontFamily": "\"Source Sans 3\", Arial, sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "Source Sans 3",
+              "fontStyle": "normal",
+              "fontWeight": "200 900",
+              "src": [
+                "file:./assets/fonts/source-sans-3-latin.woff2"
+              ]
+            },
+            {
+              "fontFamily": "Source Sans 3",
+              "fontStyle": "italic",
+              "fontWeight": "200 900",
+              "src": [
+                "file:./assets/fonts/source-sans-3-italic-latin.woff2"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "heading",
+          "name": "Space Grotesk",
+          "fontFamily": "\"Space Grotesk\", Arial, sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "Space Grotesk",
+              "fontStyle": "normal",
+              "fontWeight": "300 700",
+              "src": [
+                "file:./assets/fonts/space-grotesk-latin.woff2"
+              ]
+            }
+          ]
+        }
+      ],
+      "fontSizes": [
+        {
+          "slug": "small",
+          "name": "Small",
+          "size": "0.875rem"
+        },
+        {
+          "slug": "medium",
+          "name": "Medium",
+          "size": "1rem"
+        },
+        {
+          "slug": "large",
+          "name": "Large",
+          "size": "clamp(1.2rem, 1.05rem + 0.5vw, 1.5rem)"
+        },
+        {
+          "slug": "x-large",
+          "name": "Extra large",
+          "size": "clamp(2rem, 1.45rem + 1.8vw, 3rem)"
+        },
+        {
+          "slug": "display",
+          "name": "Display",
+          "size": "clamp(3rem, 1.85rem + 4.6vw, 6.75rem)"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var:preset|color|white",
+      "text": "var:preset|color|black"
+    },
+    "spacing": {
+      "blockGap": "var:preset|spacing|40",
+      "padding": {
+        "left": "clamp(1.25rem, 3vw, 2.5rem)",
+        "right": "clamp(1.25rem, 3vw, 2.5rem)"
+      }
+    },
+    "typography": {
+      "fontFamily": "var:preset|font-family|body",
+      "fontSize": "var:preset|font-size|medium",
+      "lineHeight": "1.6"
+    },
+    "elements": {
+      "button": {
+        "border": {
+          "radius": "999px",
+          "width": "2px"
+        },
+        "color": {
+          "background": "var:preset|color|black",
+          "text": "var:preset|color|white"
+        },
+        "spacing": {
+          "padding": {
+            "bottom": "0.8rem",
+            "left": "1.45rem",
+            "right": "1.45rem",
+            "top": "0.8rem"
+          }
+        },
+        "typography": {
+          "fontFamily": "var:preset|font-family|heading",
+          "fontSize": "var:preset|font-size|small",
+          "fontWeight": "700"
+        }
+      },
+      "heading": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|heading",
+          "fontWeight": "650",
+          "letterSpacing": "-0.045em",
+          "lineHeight": "1.02"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "var:preset|color|black"
+        }
+      }
+    },
+    "blocks": {
+      "core/navigation": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|heading",
+          "fontSize": "var:preset|font-size|small",
+          "fontWeight": "600"
+        }
+      },
+      "core/site-title": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|heading",
+          "fontSize": "var:preset|font-size|large",
+          "fontWeight": "700"
+        }
+      }
+    }
+  },
+  "templateParts": [
+    {
+      "name": "header",
+      "title": "Header",
+      "area": "header"
+    },
+    {
+      "name": "footer",
+      "title": "Footer",
+      "area": "footer"
+    }
+  ]
+}

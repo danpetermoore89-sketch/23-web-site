@@ -1,0 +1,252 @@
+/*
+Theme Name: 23 Web
+Theme URI: https://23web.co.uk/
+Author: 23 Web
+Author URI: https://23web.co.uk/
+Description: The branded block child theme for the 23 Web business website.
+Requires at least: 6.6
+Requires PHP: 7.4
+Version: 0.1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentythree-web
+Template: twentythree-theme
+Tags: block-patterns, full-site-editing
+*/
+
+:root {
+	--twentythree-web-gradient: linear-gradient(110deg, #61ebb6 0%, #dd75e7 100%);
+	--twentythree-web-shadow: 0 1rem 3rem rgba(9, 8, 10, 0.12);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+	border-radius: 0.15rem;
+	box-shadow: 0 0 0 6px #09080a;
+	outline: 3px solid #ffffff;
+	outline-offset: 2px;
+}
+
+.skip-link:focus {
+	background: #61ebb6;
+	color: #09080a;
+}
+
+a {
+	text-underline-offset: 0.16em;
+}
+
+.wp-element-button,
+.wp-block-button__link {
+	transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.wp-element-button:hover,
+.wp-block-button__link:hover {
+	transform: translateY(-2px);
+}
+
+.wp-block-button.is-style-outline > .wp-block-button__link:not(.has-background):hover {
+	background: #09080a;
+	border-color: #09080a;
+	color: #ffffff;
+}
+
+.twentythree-web-gradient-text {
+	-webkit-background-clip: text;
+	background-image: var(--twentythree-web-gradient);
+	background-clip: text;
+	color: transparent;
+}
+
+.twentythree-web-header {
+	position: relative;
+	z-index: 20;
+}
+
+.twentythree-web-header .custom-logo {
+	display: block;
+	height: auto;
+	max-height: 3rem;
+	max-width: min(12rem, 42vw);
+	object-fit: contain;
+	object-position: left center;
+	width: auto;
+}
+
+.wp-block-site-logo:has(img) + .twentythree-web-site-title-fallback {
+	display: none;
+}
+
+.twentythree-web-header .wp-block-site-title a,
+.twentythree-web-header .wp-block-navigation-item__content {
+	color: #ffffff;
+}
+
+.twentythree-web-header .wp-block-navigation-item__content:hover {
+	color: #61ebb6;
+}
+
+.twentythree-web-header .wp-block-navigation__responsive-container-open,
+.twentythree-web-header .wp-block-navigation__responsive-container-close {
+	color: #ffffff;
+}
+
+.twentythree-web-header .wp-block-navigation__responsive-container.is-menu-open {
+	background: #09080a;
+	color: #ffffff;
+	padding: 1.5rem;
+}
+
+.twentythree-web-eyebrow {
+	font-family: var(--wp--preset--font-family--heading);
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.13em;
+	text-transform: uppercase;
+}
+
+.twentythree-web-hero {
+	isolation: isolate;
+	overflow: hidden;
+	position: relative;
+}
+
+.twentythree-web-hero::after {
+	background: var(--twentythree-web-gradient);
+	border-radius: 999px;
+	content: "";
+	filter: blur(1px);
+	height: clamp(15rem, 32vw, 29rem);
+	opacity: 0.9;
+	position: absolute;
+	right: clamp(-12rem, -8vw, -4rem);
+	top: clamp(3rem, 8vw, 7rem);
+	transform: rotate(-14deg);
+	width: clamp(8rem, 17vw, 15rem);
+	z-index: -1;
+}
+
+.twentythree-web-card {
+	border: 1px solid #d6d5d7;
+	border-radius: 0.75rem;
+	box-shadow: 0 0 0 rgba(9, 8, 10, 0);
+	height: 100%;
+	overflow: hidden;
+	transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.twentythree-web-card:hover {
+	border-color: #09080a;
+	box-shadow: var(--twentythree-web-shadow);
+	transform: translateY(-4px);
+}
+
+.twentythree-web-project-image img {
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	width: 100%;
+}
+
+.twentythree-web-number {
+	-webkit-background-clip: text;
+	background-image: var(--twentythree-web-gradient);
+	background-clip: text;
+	color: transparent;
+	font-family: var(--wp--preset--font-family--heading);
+	font-size: clamp(2.5rem, 2rem + 1.5vw, 4rem);
+	font-weight: 700;
+	letter-spacing: -0.06em;
+	line-height: 0.9;
+}
+
+.twentythree-web-rule {
+	background: var(--twentythree-web-gradient);
+	border: 0;
+	height: 0.25rem;
+	width: 5rem;
+}
+
+.twentythree-web-quote {
+	border: 1px solid #d6d5d7;
+	border-radius: 0.75rem;
+	height: 100%;
+}
+
+.twentythree-web-footer a {
+	color: #ffffff;
+}
+
+.twentythree-web-footer a:hover {
+	color: #61ebb6;
+}
+
+.twentythree-web-footer .wp-block-navigation {
+	align-items: flex-start;
+}
+
+.twentythree-web-footer .wp-block-navigation__container {
+	align-items: flex-start;
+	gap: 0.65rem;
+}
+
+.twentythree-web-footer .is-style-plain {
+	list-style: none;
+}
+
+@media (max-width: 781px) {
+	.twentythree-web-hero::after {
+		opacity: 0.36;
+		right: -7rem;
+	}
+
+	.twentythree-web-header > .wp-block-group {
+		flex-wrap: nowrap;
+	}
+
+	.twentythree-web-header .wp-block-buttons {
+		display: none;
+	}
+
+	.twentythree-web-project-grid,
+	.twentythree-web-process-grid {
+		gap: 1rem;
+	}
+}
+
+@media (max-width: 479px) {
+	.twentythree-web-header .wp-block-site-title {
+		font-size: 1rem !important;
+	}
+
+	.twentythree-web-hero .wp-block-buttons,
+	.twentythree-web-hero .wp-block-button {
+		width: 100%;
+	}
+
+	.twentythree-web-hero .wp-block-button__link {
+		box-sizing: border-box;
+		text-align: center;
+		width: 100%;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	.wp-element-button,
+	.wp-block-button__link,
+	.twentythree-web-card {
+		transition: none;
+	}
+}
